@@ -1,0 +1,79 @@
+.content{
+    
+    .container{
+        height: 400px;
+        @include dFlex(space-between);
+        gap:20px;
+        .sidebar{
+            width:15%;
+            color: #616060;
+            border-right: 1px solid #eee;
+            align-self: stretch;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            li{
+                a{
+                    color: #616060;
+                    position: relative;
+                    cursor: pointer;
+                    &.active{
+                        color: $green-color;
+
+                    }
+                    &.active::before{
+                        position: absolute;
+                        content: "";
+                        background-color: $green-color;
+                        width:30px;
+                        height: 2px;
+                        left:-30px;
+                        top:50%;
+                        transform: translateY(-50%);
+
+
+                    }
+
+                    i{
+                        margin-right: 10px;
+                        font-size: 14px;
+
+                    }
+                    span{
+                        @media($maxSmall){
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+        }
+        .content-img{
+            flex: 1;
+
+            img{
+                max-width: 100%;
+
+            }
+            @media($maxSmall){
+                display: none;
+            }
+
+        }
+        .info{
+            flex: 1;
+            color:#616060 ;
+            font-size: 14px;
+            .main-paragraph{
+                margin:20px 0;
+            }
+            .contact-info{
+                font-weight: bold;
+                span{
+                    font-weight: normal;
+                }
+            }
+
+        }
+    }
+}

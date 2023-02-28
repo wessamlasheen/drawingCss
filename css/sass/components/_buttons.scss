@@ -1,0 +1,84 @@
+.main-green-btn{
+    width:fit-content;
+    padding: 10px;
+    background-color: $green-color;
+    color: #fff;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    border: 2px solid $green-color;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    i{
+        position: relative;
+        margin-right: 5px;
+        background-color: #fff;
+        color: $green-color;
+        @include bordRad(20px);
+        line-height: 20px;
+        z-index: 3;
+    }
+    span{
+        position: relative;
+        z-index: 3;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        background-color: #fff;
+        width: 0%;
+        height: 100%;
+        left:0;
+        top:0;
+        transition: width 0.3s ease-in-out;
+        z-index: 2;
+    }
+    &:hover::after{
+        width: 100%;
+
+    }
+    &:hover{
+        color: #000;
+        
+    }
+    &:hover i{
+        color: #fff;
+        background-color: $green-color;
+    }
+}
+
+// gradient button
+.gradient-btn{
+    position: relative;
+    width: fit-content;
+    height: 52px;
+    padding:10px;
+    border-radius: 52px;
+    font-weight: 700;
+    $border: 5px;
+  color: #000;
+  background: #fff;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -$border;
+        border-radius: inherit; /* !importanté */
+        background: linear-gradient(to right,
+        red 20%,
+        orange 20%,
+        orange 40%,
+        green 40%,
+        green 60%,
+        yellow 60%,
+        yellow 80%,
+        blue 80%);
+      }
+  
+   
+}

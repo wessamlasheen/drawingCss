@@ -1,0 +1,62 @@
+header{
+    background-color: $green-color;
+    padding: 10px 0;
+    // height: 90px;
+    // @media($maxSmall){
+    //     height: 0;
+    //     padding: 10px 0;
+    // }
+    .container{
+        height: 100%;
+        @media($maxSmall){
+            flex-direction: column;
+        }
+        @include dFlex(space-between);
+        .personal-info{
+            @include dFlex(space-between);
+            gap:10px;
+            .logo{
+                img{
+                    background-color: #fff;
+                    @include bordRad(60px);
+
+                }
+            }
+            .info{
+                color: #fff;
+                h1{
+                    font-size: 20px;
+                    span{
+    
+                    }
+                }
+            }
+
+        }
+        .social-links{
+            p{
+              color:#fff;
+              font:{
+                weight: 700px;
+                size:16px;
+              }
+              
+            }
+            .all-slinks{
+                i{
+                    @include bordRad(30px);
+                    color: $green-color;
+                    background-color: #fff;
+                    line-height: 30px;
+                    text-align: center;
+                    &:not(:last-child){
+                        margin-right: 10px;
+                    }
+                }
+
+
+            }
+
+        }
+    }
+}

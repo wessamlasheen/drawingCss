@@ -1,0 +1,46 @@
+.main-heading{
+    color: #4d4c4c;
+    position: relative;
+    padding-bottom: 5px;
+    width:fit-content;
+    border-bottom: 1px solid $green-color;
+    font:{
+        weight:bold;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        width:50%;
+        height: 8px;
+        background-color: $green-color;
+        border-radius: 8px;
+        left:0;
+        bottom: -4px;
+    }
+}
+
+.about-heading{
+    color: $redColor;
+    position: relative;
+    &::after{
+        position: absolute;
+        content: "";
+        background-color: $redColor;
+        width: 30px;
+        height: 1px;
+        left: -40px;
+        top:50%;
+        transform: translateY(-50%);
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        border: 1px solid $redColor;
+        width: 10px;
+        height: 10px;
+        left: -45px;
+        top:50%;
+        transform: translateY(-50%);
+
+    }
+}
